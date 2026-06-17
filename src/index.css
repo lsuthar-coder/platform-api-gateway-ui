@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-gray-950 text-gray-100 antialiased; font-family: 'Inter', system-ui, sans-serif; }
+}
+
+@layer components {
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .card { @apply bg-gray-900 border border-gray-800 rounded-xl; }
+  .btn  { @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-indigo-600 hover:bg-indigo-500 text-white; }
+  .btn-danger  { @apply btn bg-red-600/20 hover:bg-red-600/40 text-red-400 border border-red-800; }
+  .btn-ghost   { @apply btn bg-gray-800 hover:bg-gray-700 text-gray-300; }
+  .btn-warning { @apply btn bg-amber-600/20 hover:bg-amber-600/40 text-amber-400 border border-amber-800; }
+  .input  { @apply bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-indigo-500 w-full; }
+  .select { @apply bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-100 focus:outline-none focus:border-indigo-500 w-full; }
+  .badge { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium; }
+  .th { @apply px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider; }
+  .td { @apply px-4 py-3 text-sm; }
+  .tr { @apply border-b border-gray-800 hover:bg-gray-800/40 transition-colors; }
+}
